@@ -15,14 +15,14 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }} 
                     </x-nav-link>
-                    <x-nav-link href="{{ route('user.links') }}" :active="request()->routeIs('user.links')">
+                    {{-- <x-nav-link href="{{ route('user.links') }}" :active="request()->routeIs('user.links')">
                         My link
                     </x-nav-link>
                     @if(Auth::user()->position == 'admin' )
                     <x-nav-link href="{{ route('user.allLink') }}" :active="request()->routeIs('user.allLink')">
                         All Link
                     </x-nav-link>
-                    @endif
+                    @endif --}}
                 </div>
             </div>
 
