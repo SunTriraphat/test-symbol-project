@@ -13,7 +13,7 @@ class CalculateController extends Controller
     public function cal(ShortRequest $request)
     {
 
-        $explode = str_split($request->input_val);
+        $explode = str_split(strtoupper($request->input_val));
         $data = static_val::get();
         $sum = 0;
         $numPlus = 0;
@@ -174,7 +174,7 @@ class CalculateController extends Controller
         // dump($sum, $display_array);
         return redirect()->back()->with('success_message',
         '<h1 class="text-3xl text-red-500 ">Input: s = "'.$request->input_val.'"</a></h1>
-        <h1 class="text-3xl text-red-500 ">Output: "'.$sum.'"</a></h1>
-        <h1 class="text-3xl text-red-500 ">Explanation: "'.implode(" ",$display_array).'"</a></h1>');
+        <h1 class="text-3xl text-red-500 ">Output: '.$sum.'</a></h1>
+        <h1 class="text-3xl text-red-500 ">Explanation: '.implode(" ",$display_array).'</a></h1>');
     }
 }
