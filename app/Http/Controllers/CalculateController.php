@@ -137,7 +137,7 @@ class CalculateController extends Controller
             } else if ($explode[$i] == 'R') {
                 $sum += 1000;
                 $sum_R += 1000;
-                        $duplicate_stringD = $duplicate_stringR . 'R';
+                    $duplicate_stringR = $duplicate_stringR . 'R';
             }
         }
         $duplicate_stringA = $duplicate_stringA . '=' . $sum_a;
